@@ -1,0 +1,122 @@
+.card {
+  padding: 10px 10px 8px 11px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  margin-bottom: 4px;
+  background: var(--surface);
+  border: 1px solid transparent;
+  border-left-width: 3px;
+  transition: background 0.12s, border-color 0.12s, box-shadow 0.12s;
+}
+
+.card:hover {
+  background: var(--surface-hover);
+  box-shadow: var(--shadow-sm);
+}
+
+.selected {
+  background: #eff6ff;
+  border-color: var(--primary) !important;
+  box-shadow: var(--shadow-sm);
+}
+
+.top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 6px;
+  margin-bottom: 3px;
+}
+
+.title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 1;
+  min-width: 0;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  flex-shrink: 0;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.card:hover .actions,
+.selected .actions {
+  opacity: 1;
+}
+
+.pinBtn {
+  background: none;
+  font-size: 12px;
+  padding: 2px;
+  opacity: 0.4;
+  border-radius: 4px;
+}
+
+.pinBtn:hover {
+  opacity: 1;
+  background: var(--surface-hover);
+}
+
+.pinned {
+  opacity: 1 !important;
+}
+
+.deleteBtn {
+  background: none;
+  font-size: 12px;
+  padding: 2px;
+  opacity: 0.4;
+  border-radius: 4px;
+}
+
+.deleteBtn:hover {
+  opacity: 1;
+  background: #fee2e2;
+}
+
+.preview {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 4px;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.category {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: var(--primary);
+  background: rgba(79,70,229,0.08);
+  padding: 1px 6px;
+  border-radius: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100px;
+}
+
+.date {
+  font-size: 10px;
+  color: var(--text-light);
+  flex-shrink: 0;
+}
